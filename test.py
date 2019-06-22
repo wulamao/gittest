@@ -1,9 +1,9 @@
-'''
+"""
 Does the function f have monotonicity?
 f = -∑(θ_ij/2pi)(d_ij/d0)log((θ_ij/2pi)(d_ij/d0))
 where θ_ij is the included angle of s_i and s_(i+1)
 
-'''
+"""
 
 import math
 import random
@@ -11,7 +11,7 @@ import random
 # constant
 d0 = 10;
 theta0 = 2*math.pi;
- 
+
 # data structure
 class Coordinate:
     def __init__(self, d, theta):
@@ -68,15 +68,15 @@ if __name__ == "__main__":
 
         # calculate result
         res = calc_f(big_set)
-        # 
+        #
         res_set.append(res)
         # res_set.append(random.uniform(-1,1))
 
         # determine order: if they are the same value, pass it
         # cnt record the times of different data
-        # cnt = 1, flag & flag_old is available 
+        # cnt = 1, flag & flag_old is available
         # cnt = 2, flag & flag_old is comparable
-        
+
         # print(res_set[i],res_set[i-1])
         if i>1:
             if res_set[i] != res_set[i-1] :
@@ -97,5 +97,5 @@ if __name__ == "__main__":
         flag_old = flag
 
         print('', i,res_set[i],flag,flag_old,cnt)
- 
+
 
